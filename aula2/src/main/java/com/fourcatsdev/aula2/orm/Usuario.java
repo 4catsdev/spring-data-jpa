@@ -14,7 +14,6 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class Usuario {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -28,10 +27,10 @@ public class Usuario {
 	
 	private String email;
 	
-	private double pontos;
-	
-	public Usuario() {}
+	private double pontos; 
 
+	public Usuario() {}
+		
 	public Usuario(String nome, Date dataNascimento, String email, double pontos) {
 		super();
 		this.nome = nome;
@@ -63,7 +62,7 @@ public class Usuario {
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
+	
 	public String getEmail() {
 		return email;
 	}
@@ -78,12 +77,12 @@ public class Usuario {
 
 	public void setPontos(double pontos) {
 		this.pontos = pontos;
-	} 
-	
+	}
+
+	@Override
 	public String toString() {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		return "Usuario [id = " + id + ", nome = " + nome + ", nascimento=" + 
 				sdf.format(dataNascimento) + ", email= " + email + ", pontos= " + pontos + "]";
 	}
-
 }

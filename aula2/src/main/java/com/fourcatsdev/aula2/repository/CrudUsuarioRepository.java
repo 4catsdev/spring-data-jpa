@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.fourcatsdev.aula2.orm.Usuario;
 
 @Repository
-public interface CrudUsuarioRepository extends CrudRepository<Usuario, Long> {
+public interface CrudUsuarioRepository extends CrudRepository<Usuario, Long>{
 
 }
